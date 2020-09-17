@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  font-family:'Open Sans', sans-serif;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  background-color:grey
+}
+/*TAMANHO DA CAIXA COM BORDER-RADIUS CREATE ACCOUNT*/
+.content{
+  border-radius:15px;
+  background-color:white;
+  width: 960px;
+  height:80%;
+  justify-content: space-between;
+  align-items:center;
+  position: relative;
+}
+.content::before{
+  content:"";
+  border-radius: 15px 0px 0px 15px;
+  position: absolute;
+  background-color:#297e92;
+  width: 40%;
+  height: 100%;
+  left: 0;
+
+}
+.firts-column{
+  text-align: center;
+  width: 40%;
+  z-index: 10;
+  color: #ffffff;
+  
+}
+.title{
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.title-welcome{
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.description{
+  font-size: 14px;
+  font-weight:300 ;
+  color: #ffffff;
+  line-height: 30px;
+
+}
+.description-primary{
+  color: white;
+}
+.description-second{
+  color: #1b6f87;
+  font-weight:200 ;
+}
+.title-primary{
+  color: #ffffff;
+}
+.btn{
+  
+  border-radius: 15px;
+  text-transform:uppercase;
+  color: black;
+  font-size: 10px;
+  padding:10px 50px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 150px;
+  align-self: center;
+  border:none;
+  background-color:#1b6f87;
+  transition: background-color 0.8s;
+  border: 2px solid white;
+  margin: 0px;
+
+  
+ }
+.btn-primary{
+ background-color:transparent;
+  border: 2px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+  padding:10px 20px;
+  font-weight: 700;
+  margin-top: 2rem;
+  transition: background-color 0.8s;
+}
+.btn:hover{
+  background-color:white;
+  border:1px solid #1b6f87;
+}
+.btn-primary:hover{
+  background-color:#88c2ac;
+  
+}
+.first-content .second-column{
+  z-index: 11;
+}
+.second-column{
+  flex:2 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  
+}
+.first-content{
+  display: flex;
+  
+ 
+}
+
+.list-social-media{
+  display: flex; 
+  margin: 1rem;
+  color:#88c2ac ;
+}
+
+.item-social-media:not(:first-child){
+  margin-left: 10px;
+}
+.item-social-media{
+  border: 1px solid #88c2ac ;
+  border-radius:50px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color:#88c2ac ;
+  margin: 8px;
+  transition: background-color 0.5s;
+}
+.item-social-media:hover{
+  background-color: #1b6f87;
+  
+}
+
+
+li{
+  list-style: none;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  width:80% ;
+  height: 260px;
+  text-align: center;
+}
+.form input{
+  width: 90%;
+  height: 50px;
+  border: none;
+  background-color:lightgray;
+  margin: 8px;
+  color: black;
+  font-size: 16px;
+  padding-left: 0.8rem;
+}
+.icone-label{
+  color:#00c6c4;
+  margin: 8px;
+  padding:0px 5px;
+}
+/*SECONDE CONTENT SEGUNDA TELA */
+
+ .second-content{
+  position: absolute;
+  display: flex;
+}
+.second-content .firts-column{
+  order: 3;
+  z-index: 10;
+}
+.second-content .second-column{
+  order: 2;
+  z-index: -1;
+}
+.title-second{
+  color:#1b6f87;
+}
+.Password{
+  color:#1b6f87;
+  font-size: 14px;
+  margin-top: 2rem;
+}
+.sign-in-js .first-content .firts-column,
+.sign-in-js .first-content .second-column{
+z-index: -1;
+}
+
+.sign-in-js .second-content .second-column{
+  z-index: 11;
+}
+.sign-in-js .second-content .firts-column{
+  z-index: 13;
+}
+.sign-in-js .content::before{
+  left:60%;
+  animation: slidein 3s;
+  z-index: 12;
+
+}
+.sign-up-js .content::before{
+  z-index: 12;
+  animation:slideout 3s ;
+}
+.sign-up-js .second-content .firts-column,
+.sign-up-js .second-content .second-column{
+  z-index:-1 ;
+}
+
+.sign-up-js .first-content .second-column{
+  z-index:11 ;
+}
+.sign-up-js .first-content .firts-column{
+  z-index: 13;
+}
+.sign-in-js .first-content .second-column{
+  z-index: -1;
+  position: relative;
+  animation: deslocamentodir 3s;
+}
+.sign-up-js .second-content .second-column{
+  position: relative;
+  z-index: -1;
+  animation: deslocamentoesq 3s;
+}
+/* ANIMAÇÃO CSS */
+@keyframes deslocamentoesq{
+  from{
+    left:0;
+    opacity: 1;
+  }
+  25%{
+    left:-80px;
+    opacity:.5 ;
+  }
+  50%{
+    left:-100px ;
+    opacity:.2 ;
+  }
+  to{
+    left:110px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes deslocamentodir{
+  from{
+    left:0;
+    
+  }
+  25%{
+    left:-80px;
+   
+  }
+  50%{
+    left:-100px ;
+    
+  }
+  to{
+    left:110px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes slidein{
+  from{
+    left:0;
+    width: 40%;
+  }
+  25%{
+    left:5%;
+    width: 50%;
+  }
+  50%{
+    left:25%;
+    width:60% ;
+  }
+  75%{
+    left: 45%;
+    width: 50%;
+  }
+  to{
+    left:60%;
+    width: 40%;
+  }
+}
+@keyframes slideout{
+  from{
+    left:60%;
+    width: 40%;
+  }
+  25%{
+    left:45%;
+    width: 50%;
+  }
+  50%{
+    left:25%;
+    width:60% ;
+  }
+  75%{
+    left: 5%;
+    width: 50%;
+  }
+  to{
+    left:0%;
+    width: 40%;
+  }
+}
